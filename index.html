@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="score-board">
+        <div class="text-box">
+          Rock <br />Paper<br />
+          Scissors
+        </div>
+
+        <div class="computer score">
+          <p>Computer 
+            <br>
+            Score
+          </p>
+          <span id="computer-score">0</span>
+        </div>
+
+        <div class="your score">
+          <p>
+            Your
+            <br>
+            Score
+          </p>
+          <span id="user-score">0</span>
+        </div>
+      </div>
+
+      <div id="play-area">
+        <div class="game-lines">
+          <div class="game-line-1 line"></div>
+          <div class="game-line-3 line"></div>
+          <div class="game-line-2 line"></div>
+        </div>
+
+        <div class="actions">
+          <div class="rock-div action" id="rock" onclick="startGame('rock')">
+            <img src="./Images/rock.png" alt="rock" width="65px" />
+          </div>
+
+          <div class="paper-div action" id="paper" onclick="startGame('paper')">
+            <img src="./Images/paper.png" alt="paper" width="65px" />
+          </div>
+
+          <div class="scissor-div action"
+            id="scissor"
+            onclick="startGame('scissor')">
+            <img src="./Images/scissor.png" alt="scissor" width="50px" />
+          </div>
+        </div>
+
+      </div>
+
+      <div id="score-board">
+
+        <div class="box user-box-1">
+          <div class="box user-box-2">
+            <div class="box user-box-3">
+
+              <div id="you-picked" class="picked-div">
+                <h3 class="picked">You Picked</h3>
+                <div class="result-img action user-result"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="result">
+          <p id="result-text-1"></p>
+          <p id="result-text-2">AGAINST PC</p>
+          <button class="filled-btn play-again" id="play-again">
+            play again
+          </button>
+          <button class="filled-btn tie-up" id="replay">replay</button>
+        </div>
+
+        <div class="box pc-box-1">
+          <div class="box pc-box-2">
+            <div class="box pc-box-3">
+
+              <div id="pc-picked" class="picked-div">
+                <h3 class="picked">PC Picked</h3>
+                <div class="result-img action pc-result"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+       </div>
+
+      <div class="buttons">
+        <button class="rules-btn btn">rules</button>
+        <button class="next-btn btn" id="next-btn">next</button>
+      </div>
+
+      <div id="game-rules">
+        <div class="close" id="close">
+          <svg style="color: white;" 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="22" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="currentcolor">
+            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+        </div>
+
+        <h3>Game Rules</h3>
+        <ul class="rules">
+          <li>
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="8" height="8" fill="#FFD600" />
+            </svg>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li>
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="8" height="8" fill="#FFD600" />
+            </svg>
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li>
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="8" height="8" fill="#FFD600" />
+            </svg>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="8" height="8" fill="#FFD600" />
+            </svg>
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="won-game">
+      <img src="./Images/Stars.png" alt="stars" id="stars" />
+      <img src="./Images/Vector.png" alt="VectorTrophy" id="trophy" />
+      <h2 class="won-game-heading">HURRAY!!</h2>
+      <h6 class="won-game-sub-heading">YOU WON THE GAME</h6>
+      <button class="filled-btn large" onclick="playAgain()">play again</button>
+      <div class="buttons">
+        <button class="rules-btn btn">rules</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
